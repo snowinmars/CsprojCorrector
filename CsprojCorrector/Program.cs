@@ -15,8 +15,10 @@ namespace ConsoleApplication1
 			{
 				using (CsprojCorrector c = new CsprojCorrector(csprojFullPath))
 				{
-					c.SetLangVersion("default");
-					Console.WriteLine($"{Path.GetFileName(csprojFullPath)} - {c.GetLangVersion()}");
+					//c.SetLangVersion("default");
+					//Console.WriteLine($"{Path.GetFileName(csprojFullPath)} - {c.GetLangVersion()}");
+
+				c.RemoveAllCodeContractSettings();
 				}
 			}
 		}
